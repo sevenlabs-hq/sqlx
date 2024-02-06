@@ -21,27 +21,23 @@ _tls-rustls = ["sqlx-core/_tls-rustls"]
 migrate = ["sqlx-core/migrate"]
 
 # database
-mysql = ["sqlx-mysql"]
 postgres = ["sqlx-postgres"]
-sqlite = ["sqlx-sqlite"]
 
 # type integrations
-json = ["sqlx-core/json", "sqlx-mysql?/json", "sqlx-sqlite?/json"]
+json = ["sqlx-core/json"]
 
-bigdecimal = ["sqlx-core/bigdecimal", "sqlx-mysql?/bigdecimal", "sqlx-postgres?/bigdecimal"]
+bigdecimal = ["sqlx-core/bigdecimal", "sqlx-postgres?/bigdecimal"]
 bit-vec = ["sqlx-core/bit-vec", "sqlx-postgres?/bit-vec"]
-chrono = ["sqlx-core/chrono", "sqlx-mysql?/chrono", "sqlx-postgres?/chrono", "sqlx-sqlite?/chrono"]
+chrono = ["sqlx-core/chrono", "sqlx-postgres?/chrono"]
 ipnetwork = ["sqlx-core/ipnetwork", "sqlx-postgres?/ipnetwork"]
 mac_address = ["sqlx-core/mac_address", "sqlx-postgres?/mac_address"]
-rust_decimal = ["sqlx-core/rust_decimal", "sqlx-mysql?/rust_decimal", "sqlx-postgres?/rust_decimal"]
-time = ["sqlx-core/time", "sqlx-mysql?/time", "sqlx-postgres?/time", "sqlx-sqlite?/time"]
-uuid = ["sqlx-core/uuid", "sqlx-mysql?/uuid", "sqlx-postgres?/uuid", "sqlx-sqlite?/uuid"]
+rust_decimal = ["sqlx-core/rust_decimal", "sqlx-postgres?/rust_decimal"]
+time = ["sqlx-core/time", "sqlx-postgres?/time"]
+uuid = ["sqlx-core/uuid", "sqlx-postgres?/uuid"]
 
 [dependencies]
 sqlx-core = { workspace = true, features = ["offline"] }
-sqlx-mysql = { workspace = true, features = ["offline", "migrate"], optional = true }
 sqlx-postgres = { workspace = true, features = ["offline", "migrate"], optional = true }
-sqlx-sqlite = { workspace = true, features = ["offline", "migrate"], optional = true }
 
 async-std = { workspace = true, optional = true }
 tokio = { workspace = true, optional = true }

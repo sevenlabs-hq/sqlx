@@ -24,9 +24,7 @@ _tls-rustls = ["sqlx-macros-core/_tls-rustls"]
 migrate = ["sqlx-macros-core/migrate"]
 
 # database
-mysql = ["sqlx-macros-core/mysql"]
 postgres = ["sqlx-macros-core/postgres"]
-sqlite = ["sqlx-macros-core/sqlite"]
 
 # type
 bigdecimal = ["sqlx-macros-core/bigdecimal"]
