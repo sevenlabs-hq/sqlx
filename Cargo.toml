@@ -100,7 +100,7 @@ mysql = ["sqlx-mysql", "sqlx-macros?/mysql"]
 sqlite = ["sqlx-sqlite", "sqlx-macros?/sqlite"]
 
 # types
-json = ["sqlx-macros?/json", "sqlx-mysql?/json", "sqlx-postgres?/json", "sqlx-sqlite?/json"]
+json = ["sqlx-macros?/json", "sqlx-postgres?/json"]
 
 bigdecimal = ["sqlx-core/bigdecimal", "sqlx-macros?/bigdecimal", "sqlx-postgres?/bigdecimal"]
 bit-vec = ["sqlx-core/bit-vec", "sqlx-macros?/bit-vec", "sqlx-postgres?/bit-vec"]
