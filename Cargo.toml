@@ -119,9 +119,7 @@ sqlx-macros-core = { version = "=0.7.3", path = "sqlx-macros-core" }
 sqlx-macros = { version = "=0.7.3", path = "sqlx-macros" }
 
 # Driver crates
-sqlx-mysql = { version = "=0.7.3", path = "sqlx-mysql" }
 sqlx-postgres = { version = "=0.7.3", path = "sqlx-postgres" }
-sqlx-sqlite = { version = "=0.7.3", path = "sqlx-sqlite" }
 
 # Facade crate (for reference from sqlx-cli)
 sqlx = { version = "=0.7.3", path = ".", default-features = false }
@@ -153,9 +151,7 @@ default-features = false
 sqlx-core = { workspace = true, features = ["offline", "migrate"] }
 sqlx-macros = { workspace = true, optional = true }
 
-sqlx-mysql = { workspace = true, optional = true }
 sqlx-postgres = { workspace = true, optional = true }
-sqlx-sqlite = { workspace = true, optional = true }
 
 [dev-dependencies]
 anyhow = "1.0.52"
@@ -176,9 +172,6 @@ rand_xoshiro = "0.6.0"
 hex = "0.4.3"
 tempfile = "3.9.0"
 criterion = { version = "0.5.1", features = ["async_tokio"] }
-
-# Needed to test SQLCipher
-libsqlite3-sys = { version = "0.27", features = ["bundled-sqlcipher"] }
 
 #
 # Any
